@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { Fragment } from 'react';
+
+import { BrowserRouter as Router } from 'react-router-dom';
+
+import Routes from './routes';
+import GlobalStyle from './styles/globalStyle';
 
 function App() {
   return (
-    <div className="App">
-      <p>project</p>
-    </div>
+    <Router basename="/">
+      <GlobalStyle />
+      <Routes />
+    </Router>
   );
 }
 
