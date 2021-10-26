@@ -3,11 +3,11 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 
 import NotFound from '../components/NotFound';
-import Dashboard from '../pages/dashboard';
-import Landing from '../pages/landing';
+import Dashboard from '../pages/app/dashboard';
+import Landing from '../pages/app/landing';
 
-import Works from '../pages/works';
-import About from '../pages/about';
+import Works from '../pages/app/works';
+import About from '../pages/app/about';
 
 export default function Routes() {
   return (

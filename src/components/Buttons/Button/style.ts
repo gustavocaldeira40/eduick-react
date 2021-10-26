@@ -1,4 +1,9 @@
 import styled from 'styled-components';
+import { Button } from '@material-ui/core';
+
+export type TextButtonProps = {
+  isUppercase?: boolean;
+};
 
 export const Container = styled.div`
   background: #ffd74f;
@@ -9,7 +14,7 @@ export const Container = styled.div`
   height: 48px;
 `;
 
-export const ButtonPersonalized = styled.button`
+export const ButtonPersonalized = styled(Button)`
   background-color: transparent;
   width: 100%;
   height: 100%;
@@ -20,12 +25,13 @@ export const ButtonPersonalized = styled.button`
   align-items: center;
 `;
 
-export const TextButton = styled.p`
-  font-family: Open Sans;
+export const TextButton = styled.p<TextButtonProps>`
   font-style: normal;
   font-weight: bold;
   font-size: 14px;
   line-height: 19px;
+
+  text-transform: ${(props) => (props.isUppercase ? 'uppercase' : 'none')};
 
   text-align: center;
   letter-spacing: -0.02em;

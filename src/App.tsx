@@ -1,14 +1,16 @@
 import React, { Fragment } from 'react';
 
+import { CssBaseline } from '@material-ui/core';
 import { BrowserRouter as Router } from 'react-router-dom';
 
 import Routes from './routes';
-import GlobalStyle from './styles/globalStyle';
+import StyledGlobal from './styles';
 
 function App() {
   return (
     <Router basename="/">
-      <GlobalStyle />
+      <CssBaseline />
+      <StyledGlobal />
       <Routes />
     </Router>
   );

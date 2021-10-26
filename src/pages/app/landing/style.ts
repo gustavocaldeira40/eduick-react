@@ -83,6 +83,10 @@ export const TextTitle = styled.p<TextTitle>`
   color: ${(props) => (props.color ? props.color : '#ffffff')};
 `;
 
+export const ContainerInput = styled.div`
+  width: 100%;
+`;
+
 export const TextDescription = styled.p`
   width: 496px;
   font-family: Open Sans;
@@ -95,11 +99,6 @@ export const TextDescription = styled.p`
   color: #ffffff;
 `;
 
-export const ImageSheets = styled.img`
-  position: absolute;
-  right: 10.7vw;
-`;
-
 export const ContainerAction = styled.div`
   width: 100%;
   display: flex;
@@ -110,9 +109,9 @@ export const ContainerAction = styled.div`
 `;
 
 export const BackgroundImage = styled.div`
-  width: 382px;
-  height: 763px;
   background: linear-gradient(180deg, rgba(255, 234, 164, 0) 3.65%, #ffeaa4 100%);
+  width: auto;
+  height: auto;
 `;
 
 export const ImageScreen = styled.img`
