@@ -1,6 +1,5 @@
 import { Dialog, DialogContent, DialogTitle, Grid } from '@material-ui/core';
 import styled from 'styled-components';
-import { Colors } from '../../styles';
 
 export type TextTitleProps = { isUppercase?: boolean; isBold?: boolean; colorPersonalized?: any };
 
@@ -40,7 +39,7 @@ export const TextTitle = styled.p<TextTitleProps>`
 
   letter-spacing: -0.06em;
 
-  color: ${(props) => (props.colorPersonalized ? 'rgb(255,234,164)' : Colors.white)};
+  color: ${(props) => (props.colorPersonalized ? 'rgb(255,234,164)' : 'white')};
 `;
 
 export const DialogContentPersonalized = styled(DialogContent)`

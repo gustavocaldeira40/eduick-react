@@ -5,7 +5,6 @@ import { DialogContent, DialogActions, useMediaQuery, CircularProgress, DialogTi
 import { useTheme } from '@material-ui/core/styles';
 import { useForm } from 'react-hook-form';
 import { Button, Centered, Input } from '../../components';
-import { Colors } from '../../styles';
 
 import {
   ContainerIcon,
@@ -56,7 +55,7 @@ export default function ModalLogin({ close, open, title, subTitle, item }: Modal
   if (loading) {
     return (
       <Centered>
-        <CircularProgress color="inherit" style={{ color: Colors.secondary.backgroundColor }} />
+        <CircularProgress color="inherit" style={{ color: 'red' }} />
       </Centered>
     );
   }

@@ -5,11 +5,7 @@ export type TextTitle = {
   isBold?: boolean;
 };
 
-export const ContainerGeneral = styled.div`
-  background-color: red;
-  height: 100%;
-  width: 100%;
-`;
+export const ContainerGeneral = styled.div``;
 
 export const Container = styled.div`
   background: linear-gradient(180deg, #7a57fd 0%, #6135d7 100%);
@@ -24,7 +20,7 @@ export const Container = styled.div`
 
 export const ContainerContent = styled.div`
   width: 30vw;
-  margin-left: 20vw;
+  margin-left: 40vw;
   flex-direction: column;
   justify-content: space-between;
   padding: 2%;

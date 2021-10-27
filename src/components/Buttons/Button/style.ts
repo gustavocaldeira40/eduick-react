@@ -1,16 +1,22 @@
 import styled from 'styled-components';
 import { Button } from '@material-ui/core';
 
-export type TextButtonProps = {
+type TextButtonProps = {
   isUppercase?: boolean;
+  color?: string;
 };
 
-export const Container = styled.div`
-  background: #ffd74f;
+type ContainerButtonProps = {
+  width?: string | number;
+  background?: string;
+};
+
+export const Container = styled.div<ContainerButtonProps>`
+  background-color: ${(props) => (props.background ? props.background : '#ffd74f')};
   box-shadow: 1px 3px 11px -3px rgba(255, 231, 150, 0.45);
   border-radius: 4px;
 
-  width: 165px;
+  width: ${(props) => (props.width ? props.width : '165px')};
   height: 48px;
 `;
 
@@ -36,5 +42,5 @@ export const TextButton = styled.p<TextButtonProps>`
   text-align: center;
   letter-spacing: -0.02em;
 
-  color: #6f48ec;
+  color: ${(props) => (props.color ? props.color : '#6f48ec; ')};
 `;

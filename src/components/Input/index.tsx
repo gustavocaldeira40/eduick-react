@@ -5,8 +5,6 @@ import { MdOutlineVisibilityOff, MdOutlineVisibility } from 'react-icons/md';
 
 import { FormHelperTextPersonalized, TextFieldPersonalized } from './style';
 
-import { Colors } from '../../styles';
-
 export interface InputProps extends InputBaseProps {
   name?: string;
   type?: string;
