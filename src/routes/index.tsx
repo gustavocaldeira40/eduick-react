@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, BrowserRouter } from 'react-router-dom';
 
 import NotFound from '../components/NotFound';
 import Dashboard from '../pages/app/dashboard';
@@ -11,18 +11,20 @@ import About from '../pages/app/about';
 
 export default function Routes() {
   return (
-    <Switch>
-      {/* Dashboard */}
-      <Route exact path="/Dashboard" component={Dashboard} />
+    <BrowserRouter>
+      <Switch>
+        {/* Dashboard */}
+        <Route exact path="/Dashboard" component={Dashboard} />
 
-      {/* Landing */}
-      <Route exact path="/" component={Landing} />
+        {/* Landing */}
+        <Route exact path="/" component={Landing} />
 
-      <Route path="/Works" component={Works} />
-      <Route path="/About-us" component={About} />
+        <Route path="/Works" component={Works} />
+        <Route path="/About-us" component={About} />
 
-      {/*  Page not found */}
-      <Route component={NotFound} />
-    </Switch>
+        {/*  Page not found */}
+        <Route component={NotFound} />
+      </Switch>
+    </BrowserRouter>
   );
 }

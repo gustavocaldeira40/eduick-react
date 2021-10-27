@@ -1,10 +1,10 @@
 import React from 'react';
 
 import { ReactSVG } from 'react-svg';
-import SVGIcon from '../../assets/svg/detail.svg';
+import SVGIcon from '../../assets/svg/detail-right.svg';
 
 export interface SvgProps {
-  path?: string;
+  path?: any;
 }
 
 export function Svg({ path }: SvgProps) {

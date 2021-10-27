@@ -1,38 +1,29 @@
 import React, { useState } from 'react';
 
-import { Link } from 'react-router-dom';
-
 import { useForm } from 'react-hook-form';
+import { Link } from 'react-router-dom';
 
 import {
   ContainerGeneral,
   Container,
-  ContainerHeader,
-  ContainerLogo,
-  ImageLogo,
-  TextMenu,
   ContainerContent,
   ContainerTitle,
   TextTitle,
   ContainerInput,
   TextDescription,
   ContainerAction,
-  BackgroundImage,
-  ImageScreen,
+  ContainerDetailsLeft,
+  ContainerDetailsRight,
   ContainerFooter,
 } from './style';
 
-import { Button, Input, RadioButton } from '../../../components';
+import { Button, Header, Input, RadioButton, Svg } from '../../../components';
 
-import ImageLeftSide from '../../../assets/images/woman.png';
-import Logo from '../../../assets/main/logo.png';
-import ModalLogin from '../../../modals/login';
+import IconLeft from '../../../assets/svg/detail-left.svg';
+
 import LandingData from '../../../models/lading';
-import { Svg } from '../../../components/Svg';
 
 export default function Landing() {
-  const [openModal, setOpenModal] = useState(false);
-
   const roles = [
     {
       id: 1,
@@ -62,27 +53,11 @@ export default function Landing() {
 
   return (
     <ContainerGeneral>
-      <BackgroundImage>
-        <ImageScreen src={ImageLeftSide} alt="image screen" />
-      </BackgroundImage>
+      <ContainerDetailsLeft>
+        <Svg path={IconLeft} />
+      </ContainerDetailsLeft>
       <Container>
-        <ContainerHeader>
-          <ContainerLogo>
-            <ImageLogo src={Logo} style={{ padding: '20px' }} alt="logo" />
-            <Link to="/Works">
-              <TextMenu>How it works</TextMenu>
-            </Link>
-            <Link to="/About-us">
-              <TextMenu>About Us</TextMenu>
-            </Link>
-          </ContainerLogo>
-          <Button content="Get Started" onClick={() => setOpenModal(true)} />
-
-          {openModal && (
-            <ModalLogin title="Get Started" subTitle="Just Login" close={() => setOpenModal(false)} open={openModal} />
-          )}
-        </ContainerHeader>
-
+        <Header />
         <ContainerContent>
           <ContainerTitle>
             <TextTitle>Find your</TextTitle>
@@ -116,14 +91,15 @@ export default function Landing() {
                 setValues({ ...values, role: 'student' });
               }}
             />
-
-            <Button content="Search" isUppercase />
+            <Link to="/Dashboard">
+              <Button content="Search" isUppercase />
+            </Link>
           </ContainerAction>
         </ContainerContent>
       </Container>
-      <div style={{ position: 'absolute' }}>
+      <ContainerDetailsRight>
         <Svg />
-      </div>
+      </ContainerDetailsRight>
 
       <ContainerFooter />
     </ContainerGeneral>

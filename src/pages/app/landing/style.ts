@@ -5,68 +5,29 @@ export type TextTitle = {
   isBold?: boolean;
 };
 
-/* Container Generals */
-
 export const ContainerGeneral = styled.div`
-  display: flex;
-  flex-direction: column;
+  background-color: red;
+  height: 100%;
+  width: 100%;
 `;
-
-/* Contrainer purple */
 
 export const Container = styled.div`
   background: linear-gradient(180deg, #7a57fd 0%, #6135d7 100%);
   box-shadow: 4px 2px 14px rgba(0, 0, 0, 0.05);
 
   align-items: center;
-  display: flex;
+  /* display: flex; */
   justify-content: center;
   flex-direction: column;
-
   order: 1;
 `;
 
-/* Container for controls of heade */
-
-export const ContainerHeader = styled.div`
-  flex-direction: row;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 60%;
-`;
-
-export const ContainerLogo = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 40%;
-`;
-
-export const ImageLogo = styled.img`
-  padding: 20px;
-`;
-
-export const TextMenu = styled.p`
-  font-family: Open Sans;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 19px;
-
-  text-align: center;
-  letter-spacing: -0.02em;
-
-  color: #ffffff;
-`;
-
 export const ContainerContent = styled.div`
-  width: 30%;
-  height: 64.5vh;
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-around;
+  width: 30vw;
+  margin-left: 20vw;
   flex-direction: column;
+  justify-content: space-between;
+  padding: 2%;
 `;
 
 export const ContainerTitle = styled.div``;
@@ -108,23 +69,24 @@ export const ContainerAction = styled.div`
   align-items: center;
 `;
 
-export const BackgroundImage = styled.div`
-  background: linear-gradient(180deg, rgba(255, 234, 164, 0) 3.65%, #ffeaa4 100%);
-  width: auto;
-  height: auto;
-`;
-
-export const ImageScreen = styled.img`
+export const ContainerDetailsLeft = styled.div`
   position: absolute;
-  top: 15vh;
-  left: 13.5vw;
-  width: auto;
-  height: 80vh;
+  right: 0;
+  top: 20vh;
+  bottom: 20vh;
+  left: 13vw;
+`;
+export const ContainerDetailsRight = styled.div`
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 20vh;
+  left: 68vw;
 `;
 
 export const ContainerFooter = styled.div`
   width: auto;
-  height: 29vh;
+  height: 30vh;
 
   order: 2;
 
