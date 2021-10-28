@@ -21,6 +21,7 @@ type HeaderProps = {
   backgroundbutton?: string;
   haveAvatar?: boolean;
   children?: any;
+  disabledButton?: boolean;
 };
 
 export function Header({
@@ -32,6 +33,7 @@ export function Header({
   backgroundbutton,
   haveAvatar,
   children,
+  disabledButton,
 }: HeaderProps) {
   const [openModal, setOpenModal] = useState(false);
   const [openMenu, setOpenMenu] = useState(false);
@@ -67,6 +69,7 @@ export function Header({
                   background={backgroundbutton}
                   content={textButton}
                   onClick={() => setOpenModal(true)}
+                  disabled={disabledButton}
                 />
                 {haveAvatar && <Avatar src={AvatarIcon} />}
               </ContainerButton>

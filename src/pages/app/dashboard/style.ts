@@ -12,30 +12,6 @@ export const Container = styled.div`
   justify-content: center;
 `;
 
-export const ContainerHeaderGeneral = styled.div`
-  height: 64px;
-  background-color: ${Colors.primary.backgroundColor};
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`;
-
-export const ContainerHeader = styled.div`
-  width: 70%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-`;
-
-export const ContainerContentsHeader = styled.div`
-  width: 15vw;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-`;
-
 export const TextTitleHeader = styled.p`
   font-family: Open Sans;
   font-style: normal;

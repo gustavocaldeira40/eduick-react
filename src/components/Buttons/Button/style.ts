@@ -32,6 +32,7 @@ export const ButtonPersonalized = styled(Button)`
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 `;
 
 export const TextButton = styled.p<TextButtonProps>`

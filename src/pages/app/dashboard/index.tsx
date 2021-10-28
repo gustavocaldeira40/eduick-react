@@ -1,13 +1,9 @@
 import React, { useState } from 'react';
 
-import { Avatar, Grid } from '@material-ui/core';
-import { Button, Header, Svg } from '../../../components';
+import { Header, Svg } from '../../../components';
 
 import {
   Container,
-  ContainerHeaderGeneral,
-  ContainerHeader,
-  ContainerContentsHeader,
   TextTitleHeader,
   ContainerCardTitle,
   ContainerIconLeft,
@@ -22,8 +18,6 @@ import {
   ContainerFooter,
 } from './style';
 
-import Logo from '../../../assets/main/logo.png';
-import AvatarIcon from '../../../assets/icons/avatar-icon.png';
 import Details from '../../../assets/svg/details-search.svg';
 import DetailsPeoples from '../../../assets/svg/details-peoples.svg';
 import Cards from '../../../components/Cards';
@@ -63,18 +57,6 @@ export default function Dashboard() {
   ]);
   return (
     <Container>
-      {/*  <ContainerHeaderGeneral>
-        <ContainerHeader>
-          <ContainerContentsHeader>
-            <img src={Logo} alt="logo" />
-            <TextTitleHeader>My Classes</TextTitleHeader>
-          </ContainerContentsHeader>
-          <ContainerContentsHeader>
-            <Button content="Change to teacher mode" background="rgba(32, 14, 100,0.3)" color="white" width="70%" />
-            <Avatar src={AvatarIcon} />
-          </ContainerContentsHeader>
-        </ContainerHeader>
-      </ContainerHeaderGeneral> */}
       <Header
         widthHeader="70%"
         background={Colors.primary.backgroundColor}
@@ -82,6 +64,7 @@ export default function Dashboard() {
         backgroundbutton="rgba(32, 14, 100,0.3)"
         colorButton="white"
         haveAvatar
+        disabledButton
         widthButton="186px">
         <TextTitleHeader>My Classes</TextTitleHeader>
       </Header>
