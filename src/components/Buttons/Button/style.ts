@@ -7,17 +7,20 @@ type TextButtonProps = {
 };
 
 type ContainerButtonProps = {
+  marginTop?: string | number;
   width?: string | number;
   background?: string;
 };
 
 export const Container = styled.div<ContainerButtonProps>`
   background-color: ${(props) => (props.background ? props.background : '#ffd74f')};
+  margin-top: ${(props) => (props.marginTop ? props.marginTop : '0')};
   box-shadow: 1px 3px 11px -3px rgba(255, 231, 150, 0.45);
   border-radius: 4px;
 
   width: ${(props) => (props.width ? props.width : '165px')};
   height: 48px;
+  cursor: pointer;
 `;
 
 export const ButtonPersonalized = styled(Button)`

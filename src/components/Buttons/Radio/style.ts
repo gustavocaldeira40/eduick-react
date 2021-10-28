@@ -34,6 +34,7 @@ export const RadioPersonalized = styled.button<RadioProps>`
 `;
 
 export const TextRadio = styled.p`
+  font-family: Open Sans;
   font-style: normal;
   font-weight: bold;
   font-size: 14px;

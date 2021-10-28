@@ -2,16 +2,17 @@ import React, { useState } from 'react';
 
 import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
+import Media from 'react-media';
 
 import {
   ContainerGeneral,
   Container,
   ContainerContent,
-  ContainerTitle,
+  ContainerTexts,
   TextTitle,
-  ContainerInput,
   TextDescription,
   ContainerAction,
+  ContainerMiniature,
   ContainerDetailsLeft,
   ContainerDetailsRight,
   ContainerFooter,
@@ -20,6 +21,8 @@ import {
 import { Button, Header, Input, RadioButton, Svg } from '../../../components';
 
 import IconLeft from '../../../assets/svg/detail-left.svg';
+import IconMiniature from '../../../assets/svg/detail-miniature.svg';
+import IconRight from '../../../assets/svg/detail-right.svg';
 
 import LandingData from '../../../models/lading';
 
@@ -53,25 +56,31 @@ export default function Landing() {
 
   return (
     <ContainerGeneral>
-      <ContainerDetailsLeft>
-        <Svg path={IconLeft} />
-      </ContainerDetailsLeft>
+      {/* Configuration of media if window of user is until of 1200px he're rendered */}
+      <Media query="(min-width: 1200px)">
+        {(matches) =>
+          matches && (
+            <ContainerDetailsLeft>
+              <Svg path={IconLeft} />
+            </ContainerDetailsLeft>
+          )
+        }
+      </Media>
+      {/* Container General of Screen */}
       <Container>
         <Header />
         <ContainerContent>
-          <ContainerTitle>
+          <ContainerTexts>
             <TextTitle>Find your</TextTitle>
             <TextTitle isBold color="rgb(255,234,164)">
               Best Teacher
             </TextTitle>
-          </ContainerTitle>
-          <TextDescription>
-            Whether you are a student trying to find your ideal private language teachers/tutors or a teacher trying to
-            find great students for your customised private lessons!
-          </TextDescription>
-          <ContainerInput>
-            <Input columns={{ md: 12, xs: 12, lg: 12 }} placeholder="Type here what are you looking for" />
-          </ContainerInput>
+            <TextDescription>
+              Whether you are a student trying to find your ideal private language teachers/tutors or a teacher trying
+              to find great students for your customised private lessons!
+            </TextDescription>
+          </ContainerTexts>
+          <Input columns={{ md: 12, xs: 12, lg: 12 }} placeholder="Type here what are you looking for" />
           <ContainerAction>
             <RadioButton
               register={register('role', { required: true })}
@@ -91,17 +100,49 @@ export default function Landing() {
                 setValues({ ...values, role: 'student' });
               }}
             />
-            <Link to="/Dashboard">
-              <Button content="Search" isUppercase />
-            </Link>
+
+            {/* Configuration of media for if window of user is max of 1200px he're rendered */}
+            <Media query="(min-width: 1200px)">
+              {(matches) =>
+                matches && (
+                  <Link to="/Dashboard">
+                    <Button content="Search" isUppercase />
+                  </Link>
+                )
+              }
+            </Media>
           </ContainerAction>
+
+          {/* if window was minium of 500px he'are rendered */}
+          <Media query="(max-width: 500px)">
+            {(matches) =>
+              matches && (
+                <Link to="/Dashboard">
+                  <Button content="Search" isUppercase width="100%" marginTop="8%" />
+                </Link>
+              )
+            }
+          </Media>
+
+          {/* Configuration of media if window of user is minimum of 500px he're rendered */}
+          <Media query="(max-width: 500px)">
+            {(matches) =>
+              matches && (
+                <ContainerMiniature>
+                  <Svg path={IconMiniature} />
+                </ContainerMiniature>
+              )
+            }
+          </Media>
         </ContainerContent>
       </Container>
-      <ContainerDetailsRight>
-        <Svg />
-      </ContainerDetailsRight>
 
-      <ContainerFooter />
+      {/* Footer with background blue */}
+      <ContainerFooter>
+        <ContainerDetailsRight>
+          <Svg path={IconRight} />
+        </ContainerDetailsRight>
+      </ContainerFooter>
     </ContainerGeneral>
   );
 }

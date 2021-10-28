@@ -9,11 +9,12 @@ export interface ButtonValues extends ButtonBaseProps {
   isUppercase?: boolean;
   background?: string;
   color?: string;
+  marginTop?: string | number;
 }
 
-export function Button({ content, isUppercase, width, background, color, ...rest }: ButtonValues) {
+export function Button({ content, isUppercase, width, background, color, marginTop, ...rest }: ButtonValues) {
   return (
-    <Container background={background} width={width}>
+    <Container marginTop={marginTop} background={background} width={width}>
       <ButtonPersonalized {...rest} color="inherit">
         {content && (
           <TextButton isUppercase={isUppercase} color={color}>
