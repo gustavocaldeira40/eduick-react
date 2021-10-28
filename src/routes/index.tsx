@@ -6,9 +6,6 @@ import NotFound from '../components/NotFound';
 import Dashboard from '../pages/app/dashboard';
 import Landing from '../pages/app/landing';
 
-import Works from '../pages/app/works';
-import About from '../pages/app/about';
-
 export default function Routes() {
   return (
     <BrowserRouter>
@@ -18,9 +15,6 @@ export default function Routes() {
 
         {/* Landing */}
         <Route exact path="/" component={Landing} />
-
-        <Route path="/Works" component={Works} />
-        <Route path="/About-us" component={About} />
 
         {/*  Page not found */}
         <Route component={NotFound} />

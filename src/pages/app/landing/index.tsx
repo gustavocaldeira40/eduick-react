@@ -6,6 +6,8 @@ import Media from 'react-media';
 
 import {
   ContainerGeneral,
+  ContainerTextMenu,
+  TextMenu,
   Container,
   ContainerContent,
   ContainerTexts,
@@ -26,6 +28,11 @@ import IconRight from '../../../assets/svg/detail-right.svg';
 
 import LandingData from '../../../models/lading';
 
+type OptionsProps = {
+  id: number;
+  value: string;
+};
+
 export default function Landing() {
   const roles = [
     {
@@ -42,17 +49,18 @@ export default function Landing() {
     },
   ];
 
+  const [options, setOptions] = useState<OptionsProps[]>([
+    { id: 1, value: 'How it works' },
+    { id: 2, value: 'About U' },
+  ]);
+
   const [values, setValues] = useState<LandingData>({
     role: '',
   });
 
-  const [radioValue, setRadioValue] = useState(false);
-
   const { register, reset, handleSubmit, formState, setValue, control } = useForm<LandingData>({
     defaultValues: values,
   });
-
-  const { isSubmitting, errors } = formState;
 
   return (
     <ContainerGeneral>
@@ -68,7 +76,13 @@ export default function Landing() {
       </Media>
       {/* Container General of Screen */}
       <Container>
-        <Header />
+        <Header textButton="Get Started">
+          {options.map((option, index) => (
+            <ContainerTextMenu>
+              <TextMenu key={index}>{option.value}</TextMenu>
+            </ContainerTextMenu>
+          ))}
+        </Header>
         <ContainerContent>
           <ContainerTexts>
             <TextTitle>Find your</TextTitle>

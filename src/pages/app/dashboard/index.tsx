@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import { Avatar, Grid } from '@material-ui/core';
-import { Button, Svg } from '../../../components';
+import { Button, Header, Svg } from '../../../components';
 
 import {
   Container,
@@ -28,6 +28,7 @@ import Details from '../../../assets/svg/details-search.svg';
 import DetailsPeoples from '../../../assets/svg/details-peoples.svg';
 import Cards from '../../../components/Cards';
 import CoursesValues from '../../../models/courses';
+import Colors from '../../../styles/Colors';
 
 export default function Dashboard() {
   const [cards, setCards] = useState<CoursesValues[]>([
@@ -62,7 +63,7 @@ export default function Dashboard() {
   ]);
   return (
     <Container>
-      <ContainerHeaderGeneral>
+      {/*  <ContainerHeaderGeneral>
         <ContainerHeader>
           <ContainerContentsHeader>
             <img src={Logo} alt="logo" />
@@ -73,7 +74,17 @@ export default function Dashboard() {
             <Avatar src={AvatarIcon} />
           </ContainerContentsHeader>
         </ContainerHeader>
-      </ContainerHeaderGeneral>
+      </ContainerHeaderGeneral> */}
+      <Header
+        widthHeader="70%"
+        background={Colors.primary.backgroundColor}
+        textButton="Change to teacher mode"
+        backgroundbutton="rgba(32, 14, 100,0.3)"
+        colorButton="white"
+        haveAvatar
+        widthButton="186px">
+        <TextTitleHeader>My Classes</TextTitleHeader>
+      </Header>
       <ContainerIconLeft>
         <Svg path={Details} />
       </ContainerIconLeft>

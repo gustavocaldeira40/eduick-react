@@ -16,6 +16,29 @@ export const ContainerGeneral = styled.div`
   }
 `;
 
+export const ContainerTextMenu = styled.div`
+  width: 100%;
+`;
+
+export const TextMenu = styled.p`
+  width: 7vw;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 19px;
+
+  text-align: center;
+  letter-spacing: -0.02em;
+
+  color: #ffffff;
+  cursor: pointer;
+
+  @media only screen and (max-width: 500px) {
+    display: none;
+  }
+`;
+
 export const Container = styled.div`
   width: 100%;
   height: 80%;
@@ -39,7 +62,8 @@ export const ContainerContent = styled.div`
   width: 30vw;
   height: 70%;
 
-  margin-left: 40vw;
+  margin-left: 45vw;
+  margin-top: 7vh;
   flex-direction: column;
 
   @media only screen and (max-width: 500px) {
