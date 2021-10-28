@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 import Colors from '../../styles/Colors';
@@ -65,4 +66,8 @@ export const ContainerButton = styled.div`
   cursor: pointer;
 
   width: 20%;
+`;
+
+export const LinkPersonalized = styled(Link)`
+  cursor: pointer;
 `;

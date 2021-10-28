@@ -1,6 +1,4 @@
-import { Image } from '@material-ui/icons';
-import React from 'react';
-import { AiTwotoneStar } from 'react-icons/all';
+import React, { useState } from 'react';
 
 import {
   Container,
@@ -21,9 +19,11 @@ type CardsProps = {
   banner: string;
   title: string;
   lessons: number;
+  children?: any;
 };
 
-export default function Cards({ width, height, banner, title, lessons, ...rest }: CardsProps) {
+//  <AiTwotoneStar color="#FFC908" size={23} />
+export default function Cards({ width, height, banner, title, lessons, children, ...rest }: CardsProps) {
   return (
     <Container>
       <ContainerImage>
@@ -31,13 +31,7 @@ export default function Cards({ width, height, banner, title, lessons, ...rest }
       </ContainerImage>
       <ContainerContent>
         <ContainerInformationCourses>
-          <ContainerStarts>
-            <AiTwotoneStar color="#FFC908" size={23} />
-            <AiTwotoneStar color="#FFC908" size={23} />
-            <AiTwotoneStar color="#FFC908" size={23} />
-            <AiTwotoneStar color="#C4C4C4" size={23} />
-            <AiTwotoneStar color="#C4C4C4" size={23} />
-          </ContainerStarts>
+          <ContainerStarts>{children}</ContainerStarts>
           <ContainerLessons>
             <TextLessons>{`${lessons} LESSONS`}</TextLessons>
           </ContainerLessons>

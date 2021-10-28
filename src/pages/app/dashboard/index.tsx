@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+import { AiTwotoneStar } from 'react-icons/all';
 import { Header, Svg } from '../../../components';
 
 import {
@@ -30,31 +31,32 @@ export default function Dashboard() {
       id: 1,
       name: 'Master English: Improve Your Speaking',
       classification: '3.0',
-      lessons: 10,
+      lessons: 3,
       banner: '../../assets/images/course-example.png',
     },
     {
       id: 2,
       name: 'Master English: Improve Your Speaking',
       classification: '3.0',
-      lessons: 10,
+      lessons: 3,
       banner: '../../assets/images/course-example.png',
     },
     {
       id: 3,
       name: 'Master English: Improve Your Speaking',
       classification: '3.0',
-      lessons: 10,
+      lessons: 2,
       banner: '../../assets/images/course-example.png',
     },
     {
       id: 4,
       name: 'Master English: Improve Your Speaking',
       classification: '3.0',
-      lessons: 10,
+      lessons: 1,
       banner: '../../assets/images/course-example.png',
     },
   ]);
+
   return (
     <Container>
       <Header
@@ -87,7 +89,15 @@ export default function Dashboard() {
       </ContainerCardTitle>
       <ContainerCards>
         {cards.map((card, index) => {
-          return <Cards lessons={card.lessons} title={card.name} banner={card.banner} key={index} />;
+          return (
+            <Cards lessons={card.lessons} title={card.name} banner={card.banner} key={index}>
+              {card.lessons ? (
+                <AiTwotoneStar key={index} color="#FFC908" size={23} />
+              ) : (
+                <AiTwotoneStar key={index} color=" #C4C4C4" size={23} />
+              )}
+            </Cards>
+          );
         })}
       </ContainerCards>
       <ContainerPagination>

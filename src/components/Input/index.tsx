@@ -46,6 +46,7 @@ export function Input({
             type={visiblePassword ? 'text' : 'password'}
             InputLabelProps={{ style: { height: 20 } }}
             InputProps={{
+              style: { color: 'white' },
               endAdornment: (
                 <InputAdornment position="end">
                   <IconButton
@@ -79,6 +80,9 @@ export function Input({
           name={name}
           type={type}
           InputLabelProps={{ style: { height: 20 } }}
+          InputProps={{
+            style: { color: 'white' },
+          }}
           {...props}
         />
       )}

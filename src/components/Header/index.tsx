@@ -1,10 +1,18 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Media from 'react-media';
 import { Avatar } from '@material-ui/core';
 
 import ModalLogin from '../../modals/login';
 
-import { Container, ContainerIcon, ContainerHeader, ContainerLogo, ImageLogo, ContainerButton } from './style';
+import {
+  Container,
+  ContainerIcon,
+  ContainerHeader,
+  ContainerLogo,
+  ImageLogo,
+  ContainerButton,
+  LinkPersonalized,
+} from './style';
 
 import Logo from '../../assets/main/logo.png';
 import { Button } from '..';
@@ -45,7 +53,9 @@ export function Header({
           {(matches) =>
             matches && (
               <ContainerIcon onClick={() => setOpenMenu(true)}>
-                <img src={HamburgerIcon} alt="icon menu" />
+                <LinkPersonalized to="/">
+                  <img src={HamburgerIcon} alt="icon menu" />
+                </LinkPersonalized>
                 {openMenu && <ModalMenu close={() => setOpenMenu(!openMenu)} open={openMenu} />}
               </ContainerIcon>
             )
@@ -54,7 +64,9 @@ export function Header({
 
         {/* Options of menu */}
         <ContainerLogo>
-          <ImageLogo src={Logo} style={{ padding: '20px' }} alt="logo" />
+          <LinkPersonalized to="/">
+            <ImageLogo src={Logo} style={{ padding: '20px' }} alt="logo" />
+          </LinkPersonalized>
           {children}
         </ContainerLogo>
 

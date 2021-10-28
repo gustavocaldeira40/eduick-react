@@ -11,9 +11,9 @@ export const ContainerIcon = styled.div`
   align-items: center;
   justify-content: center;
   border-radius: 50px;
-  left: 72vw;
+  left: 65vw;
   right: 25vw;
-  top: 22vh;
+  top: 24vh;
   bottom: 73vh;
 
   position: fixed;
@@ -44,14 +44,23 @@ export const TextTitle = styled.p<TextTitleProps>`
 
 export const DialogContentPersonalized = styled(DialogContent)`
   background-color: #6a40e4;
-  height: 50vh;
+  height: 45vh;
   display: flex;
   justify-content: space-between;
 
   flex-direction: column;
+  @media only screen and (max-width: 500px) {
+    width: auto;
+    height: 100vh;
+  }
 `;
 
-export const ContainerFields = styled.div``;
+export const ContainerFields = styled.div`
+  height: 20em;
+  display: flex;
+  flex-direction: column;
+  padding: 2%;
+`;
 
 export const LabelFields = styled.p`
   font-family: Open Sans;

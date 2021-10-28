@@ -62,23 +62,23 @@ export default function ModalLogin({ close, open, title, subTitle, item }: Modal
 
   return (
     <DialogPersonalized
-      maxWidth="md"
+      maxWidth="sm"
       fullScreen={fullScreen}
       fullWidth
       open={open}
       onClose={close}
       aria-labelledby="responsive-dialog-title">
-      <DialogContentPersonalized>
-        <ContainerIcon onClick={() => close()}>
-          <img src={IconClose} alt="close icon" />
-        </ContainerIcon>
-        <ContainerTitle>
-          <TextTitle>{title}</TextTitle>
-          <TextTitle colorPersonalized isUppercase isBold>
-            {subTitle}
-          </TextTitle>
-        </ContainerTitle>
-        <form onSubmit={handleSubmit(onSubmit)}>
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <DialogContentPersonalized>
+          <ContainerIcon onClick={() => close()}>
+            <img src={IconClose} alt="close icon" />
+          </ContainerIcon>
+          <ContainerTitle>
+            <TextTitle>{title}</TextTitle>
+            <TextTitle colorPersonalized isUppercase isBold>
+              {subTitle}
+            </TextTitle>
+          </ContainerTitle>
           <ContainerFields>
             <LabelFields>Username</LabelFields>
             <Input
@@ -97,11 +97,11 @@ export default function ModalLogin({ close, open, title, subTitle, item }: Modal
 
             <LabelFields>Password</LabelFields>
             <Input
+              password
               defaultValue={values.password}
               register={register('password', { required: 'Esse campo é obrigatório' })}
               name="password"
               columns={{ md: 12, xs: 12, lg: 12 }}
-              password
               error={Boolean(errors.password)}
               helperText={errors.password?.message}
               onChange={(e: any) => {
@@ -121,8 +121,8 @@ export default function ModalLogin({ close, open, title, subTitle, item }: Modal
               }}
             />
           </DialogActions>
-        </form>
-      </DialogContentPersonalized>
+        </DialogContentPersonalized>
+      </form>
     </DialogPersonalized>
   );
 }

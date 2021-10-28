@@ -9,7 +9,7 @@ export const Container = styled.div`
   margin: 2vh 1vw;
   padding: 1%;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   flex-direction: column;
 `;
 

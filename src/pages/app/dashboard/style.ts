@@ -47,9 +47,12 @@ export const ContainerIconRight = styled.section`
 
 export const ContainerTexts = styled.div`
   width: 40vw;
-  height: 100%;
-  margin-left: 5vw;
+  height: 65%;
   padding: 2%;
+  margin: 2vh 5vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
 
   flex-direction: column;
 `;
@@ -84,10 +87,11 @@ export const TextDescription = styled.p`
 `;
 
 export const ContainerCards = styled.div`
+  touch-action: manipulation;
   overflow: auto;
   overflow-x: hidden;
-  width: 70vw;
-
+  overscroll-behavior-x: unset;
+  width: 70%;
   margin: 5vh 15vw;
 
   display: flex;
