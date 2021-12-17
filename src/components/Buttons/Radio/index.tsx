@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
-import { ButtonBaseProps } from '@material-ui/core';
+import React, { useState } from 'react'
+import { ButtonBaseProps } from '@material-ui/core'
 
-import { Container, RadioPersonalized, TextRadio } from './style';
+import { Container, RadioPersonalized, TextRadio } from './style'
 
-import CheckIcon from '../../../assets/icons/check-icon.png';
+import CheckIcon from '../../../assets/icons/check-icon.png'
 
 export interface RadioProps extends ButtonBaseProps {
-  register?: any;
-  selected: boolean;
-  content?: string;
+  register?: any
+  selected: boolean
+  content?: string
 }
 
 export function RadioButton({ register, selected, content, ...rest }: RadioProps) {
@@ -19,5 +19,5 @@ export function RadioButton({ register, selected, content, ...rest }: RadioProps
       </RadioPersonalized>
       <TextRadio>{content && content}</TextRadio>
     </Container>
-  );
+  )
 }

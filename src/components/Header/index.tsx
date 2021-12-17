@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import Media from 'react-media';
-import { Avatar } from '@material-ui/core';
+import React, { useState } from 'react'
+import Media from 'react-media'
+import { Avatar } from '@material-ui/core'
 
-import ModalLogin from '../../modals/login';
+import ModalLogin from '../../modals/login'
 
 import {
   Container,
@@ -12,25 +12,25 @@ import {
   ImageLogo,
   ContainerButton,
   LinkPersonalized,
-} from './style';
+} from './style'
 
-import Logo from '../../assets/main/logo.png';
-import { Button } from '..';
-import HamburgerIcon from '../../assets/icons/hamburger-icon.png';
-import ModalMenu from '../../modals/menu';
-import AvatarIcon from '../../assets/icons/avatar-icon.png';
+import Logo from '../../assets/main/logo.png'
+import { Button } from '..'
+import HamburgerIcon from '../../assets/icons/hamburger-icon.png'
+import ModalMenu from '../../modals/menu'
+import AvatarIcon from '../../assets/icons/avatar-icon.png'
 
 type HeaderProps = {
-  background?: string;
-  widthHeader?: string | number;
-  widthButton?: string | number;
-  colorButton?: string;
-  textButton?: string;
-  backgroundbutton?: string;
-  haveAvatar?: boolean;
-  children?: any;
-  disabledButton?: boolean;
-};
+  background?: string
+  widthHeader?: string | number
+  widthButton?: string | number
+  colorButton?: string
+  textButton?: string
+  backgroundbutton?: string
+  haveAvatar?: boolean
+  children?: any
+  disabledButton?: boolean
+}
 
 export function Header({
   background,
@@ -43,8 +43,8 @@ export function Header({
   children,
   disabledButton,
 }: HeaderProps) {
-  const [openModal, setOpenModal] = useState(false);
-  const [openMenu, setOpenMenu] = useState(false);
+  const [openModal, setOpenModal] = useState(false)
+  const [openMenu, setOpenMenu] = useState(false)
 
   return (
     <Container background={background}>
@@ -93,5 +93,5 @@ export function Header({
         )}
       </ContainerHeader>
     </Container>
-  );
+  )
 }

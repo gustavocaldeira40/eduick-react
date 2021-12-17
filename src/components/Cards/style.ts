@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const Container = styled.div`
   height: 323px;
@@ -11,22 +11,22 @@ export const Container = styled.div`
   display: flex;
   justify-content: space-around;
   flex-direction: column;
-`;
+`
 
-export const ContainerImage = styled.div``;
+export const ContainerImage = styled.div``
 
 export const ContainerContent = styled.div`
   padding: 0 5%;
-`;
+`
 
 export const ContainerInformationCourses = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin: 1vh 0;
-`;
+`
 
-export const ContainerStarts = styled.div``;
+export const ContainerStarts = styled.div``
 
 export const ContainerLessons = styled.div`
   width: 84px;
@@ -38,7 +38,7 @@ export const ContainerLessons = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-`;
+`
 
 export const TextLessons = styled.p`
   font-family: Open Sans;
@@ -53,7 +53,7 @@ export const TextLessons = styled.p`
   text-transform: uppercase;
 
   opacity: 0.8;
-`;
+`
 
 export const TextTitle = styled.p`
   font-family: Poppins;
@@ -63,4 +63,4 @@ export const TextTitle = styled.p`
   line-height: 160%;
 
   color: #200e64;
-`;
+`

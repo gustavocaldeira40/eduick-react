@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 
-import { useForm } from 'react-hook-form';
-import { Link } from 'react-router-dom';
-import Media from 'react-media';
+import { useForm } from 'react-hook-form'
+import { Link } from 'react-router-dom'
+import Media from 'react-media'
 
 import {
   ContainerGeneral,
@@ -18,20 +18,20 @@ import {
   ContainerDetailsLeft,
   ContainerDetailsRight,
   ContainerFooter,
-} from './style';
+} from './style'
 
-import { Button, Header, Input, RadioButton, Svg } from '../../../components';
+import { Button, Header, Input, RadioButton, Svg } from '../../../components'
 
-import IconLeft from '../../../assets/svg/detail-left.svg';
-import IconMiniature from '../../../assets/svg/detail-miniature.svg';
-import IconRight from '../../../assets/svg/detail-right.svg';
+import IconLeft from '../../../assets/svg/detail-left.svg'
+import IconMiniature from '../../../assets/svg/detail-miniature.svg'
+import IconRight from '../../../assets/svg/detail-right.svg'
 
-import LandingData from '../../../models/lading';
+import LandingData from '../../../models/lading'
 
 type OptionsProps = {
-  id: number;
-  value: string;
-};
+  id: number
+  value: string
+}
 
 export default function Landing() {
   const roles = [
@@ -47,20 +47,20 @@ export default function Landing() {
       content: 'i’m a student',
       checked: false,
     },
-  ];
+  ]
 
   const [options, setOptions] = useState<OptionsProps[]>([
     { id: 1, value: 'How it works' },
     { id: 2, value: 'About U' },
-  ]);
+  ])
 
   const [values, setValues] = useState<LandingData>({
     role: '',
-  });
+  })
 
   const { register, reset, handleSubmit, formState, setValue, control } = useForm<LandingData>({
     defaultValues: values,
-  });
+  })
 
   return (
     <ContainerGeneral>
@@ -101,8 +101,8 @@ export default function Landing() {
               selected={values.role === 'teacher' || false}
               content="i’m a teacher"
               onClick={() => {
-                setValue('role', 'teacher');
-                setValues({ ...values, role: 'teacher' });
+                setValue('role', 'teacher')
+                setValues({ ...values, role: 'teacher' })
               }}
             />
             <RadioButton
@@ -110,8 +110,8 @@ export default function Landing() {
               selected={values.role === 'student' || false}
               content="i’m a student"
               onClick={() => {
-                setValue('role', 'student');
-                setValues({ ...values, role: 'student' });
+                setValue('role', 'student')
+                setValues({ ...values, role: 'student' })
               }}
             />
 
@@ -158,5 +158,5 @@ export default function Landing() {
         </ContainerDetailsRight>
       </ContainerFooter>
     </ContainerGeneral>
-  );
+  )
 }

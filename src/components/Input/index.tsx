@@ -1,19 +1,19 @@
-import React, { useState } from 'react';
-import { Grid, TextField, InputAdornment, IconButton, InputBaseProps } from '@material-ui/core';
+import React, { useState } from 'react'
+import { Grid, TextField, InputAdornment, IconButton, InputBaseProps } from '@material-ui/core'
 
-import { MdOutlineVisibilityOff, MdOutlineVisibility } from 'react-icons/md';
+import { MdOutlineVisibilityOff, MdOutlineVisibility } from 'react-icons/md'
 
-import { FormHelperTextPersonalized, TextFieldPersonalized } from './style';
+import { FormHelperTextPersonalized, TextFieldPersonalized } from './style'
 
 export interface InputProps extends InputBaseProps {
-  name?: string;
-  type?: string;
-  columns?: any;
-  password?: boolean;
-  hidden?: boolean;
-  register?: any;
-  defaultValue?: string;
-  helperText?: string;
+  name?: string
+  type?: string
+  columns?: any
+  password?: boolean
+  hidden?: boolean
+  register?: any
+  defaultValue?: string
+  helperText?: string
 }
 
 export function Input({
@@ -27,13 +27,13 @@ export function Input({
   helperText,
   ...props
 }: InputProps) {
-  const [visiblePassword, setVisiblePassword] = useState(false);
+  const [visiblePassword, setVisiblePassword] = useState(false)
 
   const defaultProps = {
     variant: 'outlined',
     fullWidth: true,
     defaultValue: defaultValue || '',
-  };
+  }
 
   if (password) {
     return (
@@ -52,7 +52,8 @@ export function Input({
                   <IconButton
                     onClick={() => setVisiblePassword(!visiblePassword)}
                     aria-label="toggle password visibility"
-                    edge="end">
+                    edge="end"
+                  >
                     {!visiblePassword ? (
                       <MdOutlineVisibility size={22} color="#BBA8F2" />
                     ) : (
@@ -68,7 +69,7 @@ export function Input({
         )}
         {helperText && <FormHelperTextPersonalized>{helperText}</FormHelperTextPersonalized>}
       </Grid>
-    );
+    )
   }
 
   return (
@@ -87,5 +88,5 @@ export function Input({
         />
       )}
     </Grid>
-  );
+  )
 }

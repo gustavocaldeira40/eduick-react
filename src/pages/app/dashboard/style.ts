@@ -1,16 +1,16 @@
-import { Grid } from '@material-ui/core';
-import styled from 'styled-components';
-import Colors from '../../../styles/Colors';
+import { Grid } from '@material-ui/core'
+import styled from 'styled-components'
+import Colors from '../../../styles/Colors'
 
 interface TextWelcomeProps {
-  isBold?: boolean;
+  isBold?: boolean
 }
 
 export const Container = styled.div`
   height: 100vh;
   background-color: #e5e5e5;
   justify-content: center;
-`;
+`
 
 export const TextTitleHeader = styled.p`
   font-family: Open Sans;
@@ -22,7 +22,7 @@ export const TextTitleHeader = styled.p`
   letter-spacing: -0.02em;
 
   color: #ffffff;
-`;
+`
 
 export const ContainerCardTitle = styled.div`
   width: 70%;
@@ -31,19 +31,19 @@ export const ContainerCardTitle = styled.div`
   margin: 3vh 15vw;
   display: flex;
   flex-direction: row;
-`;
+`
 
 export const ContainerIconLeft = styled.section`
   position: absolute;
   top: 14vh;
   left: 12vw;
-`;
+`
 
 export const ContainerIconRight = styled.section`
   position: absolute;
   top: 14vh;
   right: 20vw;
-`;
+`
 
 export const ContainerTexts = styled.div`
   width: 40vw;
@@ -55,14 +55,14 @@ export const ContainerTexts = styled.div`
   align-items: flex-start;
 
   flex-direction: column;
-`;
+`
 
 export const ContainerWelcome = styled.div`
   width: 7.5vw;
   justify-content: space-between;
   display: flex;
   flex-direction: row;
-`;
+`
 
 export const TextWelcome = styled.p<TextWelcomeProps>`
   font-family: Poppins;
@@ -72,7 +72,7 @@ export const TextWelcome = styled.p<TextWelcomeProps>`
   line-height: 160%;
 
   color: #200e64;
-`;
+`
 
 export const TextDescription = styled.p`
   width: 450px;
@@ -84,7 +84,7 @@ export const TextDescription = styled.p`
   /* or 22px */
 
   color: #343434;
-`;
+`
 
 export const ContainerCards = styled.div`
   touch-action: manipulation;
@@ -98,7 +98,7 @@ export const ContainerCards = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-`;
+`
 
 export const ContainerPagination = styled.div`
   display: flex;
@@ -106,7 +106,7 @@ export const ContainerPagination = styled.div`
   margin: 5vh 15vw;
   justify-content: center;
   align-items: center;
-`;
+`
 
 export const ContainerDot = styled.div`
   width: 14px;
@@ -115,7 +115,7 @@ export const ContainerDot = styled.div`
   margin: 0 1%;
 
   border-radius: 50px;
-`;
+`
 
 export const ContainerFooter = styled.div`
   width: 100%;
@@ -126,4 +126,4 @@ export const ContainerFooter = styled.div`
   align-items: center;
   position: fixed;
   bottom: 0;
-`;
+`

@@ -1,12 +1,12 @@
-import React, { Fragment } from 'react';
+import React, { Fragment } from 'react'
 
-import { createTheme, ThemeProvider } from '@material-ui/core';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { createTheme, ThemeProvider } from '@material-ui/core'
+import { BrowserRouter as Router } from 'react-router-dom'
 
-import { ToastContainer } from 'react-toastify';
+import { ToastContainer } from 'react-toastify'
 
-import Routes from './routes';
-import GlobalStyle from './components/GlobalStyle';
+import Routes from './routes'
+import GlobalStyle from './components/GlobalStyle'
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
       <Routes />
       <ToastContainer autoClose={3000} />
     </Router>
-  );
+  )
 }
 
-export default App;
+export default App

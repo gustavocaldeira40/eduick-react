@@ -1,15 +1,15 @@
-import React from 'react';
-import { ButtonBaseProps } from '@material-ui/core';
+import React from 'react'
+import { ButtonBaseProps } from '@material-ui/core'
 
-import { Container, TextButton, ButtonPersonalized } from './style';
+import { Container, TextButton, ButtonPersonalized } from './style'
 
 export interface ButtonValues extends ButtonBaseProps {
-  width?: string | number;
-  content?: string;
-  isUppercase?: boolean;
-  background?: string;
-  color?: string;
-  marginTop?: string | number;
+  width?: string | number
+  content?: string
+  isUppercase?: boolean
+  background?: string
+  color?: string
+  marginTop?: string | number
 }
 
 export function Button({ content, isUppercase, width, background, color, marginTop, ...rest }: ButtonValues) {
@@ -23,5 +23,5 @@ export function Button({ content, isUppercase, width, background, color, marginT
         )}
       </ButtonPersonalized>
     </Container>
-  );
+  )
 }

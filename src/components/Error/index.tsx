@@ -1,20 +1,20 @@
-import React from 'react';
+import React from 'react'
 
-import * as S from './styles';
+import * as S from './styles'
 
 type ErrorProps = {
-  title?: string;
-  message?: string;
-  status: number;
-  children?: JSX.Element;
-};
+  title?: string
+  message?: string
+  status: number
+  children?: JSX.Element
+}
 
 export default function Error({ title, message, status, children }: ErrorProps) {
   const emojisBySatus = {
     500: '😱',
     404: '😅',
     401: '🤔',
-  } as any;
+  } as any
 
   return (
     <div style={{ textAlign: 'center' }}>
@@ -26,5 +26,5 @@ export default function Error({ title, message, status, children }: ErrorProps) 
         {children}
       </div>
     </div>
-  );
+  )
 }

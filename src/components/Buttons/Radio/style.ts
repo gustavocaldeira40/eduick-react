@@ -1,9 +1,9 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export type RadioProps = {
-  isChecked?: boolean;
-  isDisabled?: boolean;
-};
+  isChecked?: boolean
+  isDisabled?: boolean
+}
 
 export const Container = styled.div`
   width: 162px;
@@ -17,7 +17,7 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-`;
+`
 
 export const RadioPersonalized = styled.button<RadioProps>`
   width: 18px;
@@ -31,7 +31,7 @@ export const RadioPersonalized = styled.button<RadioProps>`
   display: flex;
   justify-content: center;
   align-items: center;
-`;
+`
 
 export const TextRadio = styled.p`
   font-family: Open Sans;
@@ -45,4 +45,4 @@ export const TextRadio = styled.p`
   text-transform: uppercase;
 
   color: #ffffff;
-`;
+`

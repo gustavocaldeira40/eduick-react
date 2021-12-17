@@ -1,10 +1,10 @@
-import React from 'react';
+import React from 'react'
 
-import { Route, Switch, BrowserRouter } from 'react-router-dom';
+import { Route, Switch, BrowserRouter } from 'react-router-dom'
 
-import NotFound from '../components/NotFound';
-import Dashboard from '../pages/app/dashboard';
-import Landing from '../pages/app/landing';
+import NotFound from '../components/NotFound'
+import Dashboard from '../pages/app/dashboard'
+import Landing from '../pages/app/landing'
 
 export default function Routes() {
   return (
@@ -20,5 +20,5 @@ export default function Routes() {
         <Route component={NotFound} />
       </Switch>
     </BrowserRouter>
-  );
+  )
 }

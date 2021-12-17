@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 
-import { AiTwotoneStar } from 'react-icons/all';
-import { Header, Svg } from '../../../components';
+import { AiTwotoneStar } from 'react-icons/all'
+import { Header, Svg } from '../../../components'
 
 import {
   Container,
@@ -17,13 +17,13 @@ import {
   ContainerPagination,
   ContainerDot,
   ContainerFooter,
-} from './style';
+} from './style'
 
-import Details from '../../../assets/svg/details-search.svg';
-import DetailsPeoples from '../../../assets/svg/details-peoples.svg';
-import Cards from '../../../components/Cards';
-import CoursesValues from '../../../models/courses';
-import Colors from '../../../styles/Colors';
+import Details from '../../../assets/svg/details-search.svg'
+import DetailsPeoples from '../../../assets/svg/details-peoples.svg'
+import Cards from '../../../components/Cards'
+import CoursesValues from '../../../models/courses'
+import Colors from '../../../styles/Colors'
 
 export default function Dashboard() {
   const [cards, setCards] = useState<CoursesValues[]>([
@@ -55,7 +55,7 @@ export default function Dashboard() {
       lessons: 1,
       banner: '../../assets/images/course-example.png',
     },
-  ]);
+  ])
 
   return (
     <Container>
@@ -67,7 +67,8 @@ export default function Dashboard() {
         colorButton="white"
         haveAvatar
         disabledButton
-        widthButton="186px">
+        widthButton="186px"
+      >
         <TextTitleHeader>My Classes</TextTitleHeader>
       </Header>
       <ContainerIconLeft>
@@ -97,7 +98,7 @@ export default function Dashboard() {
                 <AiTwotoneStar key={index} color=" #C4C4C4" size={23} />
               )}
             </Cards>
-          );
+          )
         })}
       </ContainerCards>
       <ContainerPagination>
@@ -109,5 +110,5 @@ export default function Dashboard() {
         <TextDescription>Copyright © 2020 Eduick. Todos os direitos reservados.</TextDescription>
       </ContainerFooter>
     </Container>
-  );
+  )
 }

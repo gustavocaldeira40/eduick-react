@@ -1,9 +1,9 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export type TextTitle = {
-  color?: any;
-  isBold?: boolean;
-};
+  color?: any
+  isBold?: boolean
+}
 
 /* has configure of media for if user be in window minium of 500px media  he're rendered */
 
@@ -14,11 +14,11 @@ export const ContainerGeneral = styled.div`
     width: 100vw;
     height: 100vh;
   }
-`;
+`
 
 export const ContainerTextMenu = styled.div`
   width: 100%;
-`;
+`
 
 export const TextMenu = styled.p`
   width: 7vw;
@@ -37,7 +37,7 @@ export const TextMenu = styled.p`
   @media only screen and (max-width: 500px) {
     display: none;
   }
-`;
+`
 
 export const Container = styled.div`
   width: 100%;
@@ -56,7 +56,7 @@ export const Container = styled.div`
     padding: 0 7vw;
     display: block;
   }
-`;
+`
 
 export const ContainerContent = styled.div`
   width: 30vw;
@@ -71,7 +71,7 @@ export const ContainerContent = styled.div`
     height: 20%;
     margin: 0;
   }
-`;
+`
 
 export const ContainerTexts = styled.div`
   display: flex;
@@ -84,7 +84,7 @@ export const ContainerTexts = styled.div`
     width: auto;
     display: block;
   }
-`;
+`
 
 export const TextTitle = styled.p<TextTitle>`
   width: 334px;
@@ -100,7 +100,7 @@ export const TextTitle = styled.p<TextTitle>`
     font-size: 28px;
     width: auto;
   }
-`;
+`
 
 export const TextDescription = styled.p`
   width: 496px;
@@ -116,7 +116,7 @@ export const TextDescription = styled.p`
   @media only screen and (max-width: 500px) {
     display: none;
   }
-`;
+`
 
 export const ContainerAction = styled.div`
   display: flex;
@@ -128,7 +128,7 @@ export const ContainerAction = styled.div`
   @media only screen and (max-width: 500px) {
     margin: 5vh 0;
   }
-`;
+`
 
 export const ContainerDetailsLeft = styled.div`
   position: fixed;
@@ -140,7 +140,7 @@ export const ContainerDetailsLeft = styled.div`
   @media only screen and (max-width: 500px) {
     display: block;
   }
-`;
+`
 export const ContainerDetailsRight = styled.div`
   position: absolute;
   right: 0;
@@ -151,7 +151,7 @@ export const ContainerDetailsRight = styled.div`
   @media only screen and (max-width: 500px) {
     display: none;
   }
-`;
+`
 
 export const ContainerMiniature = styled.div`
   display: flex;
@@ -159,7 +159,7 @@ export const ContainerMiniature = styled.div`
   align-items: center;
   margin: 5vh 0;
   z-index: 1;
-`;
+`
 
 export const ContainerFooter = styled.div`
   height: 20%;
@@ -175,4 +175,4 @@ export const ContainerFooter = styled.div`
     width: 100%;
     height: 20%;
   }
-`;
+`

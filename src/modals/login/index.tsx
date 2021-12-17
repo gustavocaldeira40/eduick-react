@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react'
 
-import { DialogContent, DialogActions, useMediaQuery, CircularProgress, DialogTitle, Grid } from '@material-ui/core';
+import { DialogContent, DialogActions, useMediaQuery, CircularProgress, DialogTitle, Grid } from '@material-ui/core'
 
-import { useTheme } from '@material-ui/core/styles';
-import { useForm } from 'react-hook-form';
-import { Button, Centered, Input } from '../../components';
+import { useTheme } from '@material-ui/core/styles'
+import { useForm } from 'react-hook-form'
+import { Button, Centered, Input } from '../../components'
 
 import {
   ContainerIcon,
@@ -14,50 +14,50 @@ import {
   TextTitle,
   ContainerFields,
   LabelFields,
-} from './style';
+} from './style'
 
-import LoginData from '../../models/login';
+import LoginData from '../../models/login'
 
-import IconClose from '../../assets/icons/close-icon.png';
+import IconClose from '../../assets/icons/close-icon.png'
 
 export type ModalProps = {
-  close: () => void;
-  open: boolean;
-  title: string;
-  subTitle?: string;
-  item?: any;
-};
+  close: () => void
+  open: boolean
+  title: string
+  subTitle?: string
+  item?: any
+}
 
 export default function ModalLogin({ close, open, title, subTitle, item }: ModalProps) {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(false)
 
   const { register, reset, handleSubmit, formState, setValue, control } = useForm<LoginData>({
     defaultValues: item,
-  });
-  const { isSubmitting, errors } = formState;
+  })
+  const { isSubmitting, errors } = formState
 
-  const theme = useTheme();
-  const fullScreen = useMediaQuery(theme.breakpoints.down('md'));
+  const theme = useTheme()
+  const fullScreen = useMediaQuery(theme.breakpoints.down('md'))
 
   useEffect(() => {
-    reset(item);
-  }, [item, reset]);
+    reset(item)
+  }, [item, reset])
 
   const [values, setValues] = useState<LoginData>({
     username: '',
     password: '',
-  });
+  })
 
   const onSubmit = async (value: any) => {
-    setLoading(true);
-  };
+    setLoading(true)
+  }
 
   if (loading) {
     return (
       <Centered>
         <CircularProgress color="inherit" style={{ color: 'red' }} />
       </Centered>
-    );
+    )
   }
 
   return (
@@ -67,7 +67,8 @@ export default function ModalLogin({ close, open, title, subTitle, item }: Modal
       fullWidth
       open={open}
       onClose={close}
-      aria-labelledby="responsive-dialog-title">
+      aria-labelledby="responsive-dialog-title"
+    >
       <form onSubmit={handleSubmit(onSubmit)}>
         <DialogContentPersonalized>
           <ContainerIcon onClick={() => close()}>
@@ -91,7 +92,7 @@ export default function ModalLogin({ close, open, title, subTitle, item }: Modal
               onChange={(e: any) => {
                 setValue('username', e.target.value, {
                   shouldValidate: true,
-                });
+                })
               }}
             />
 
@@ -107,7 +108,7 @@ export default function ModalLogin({ close, open, title, subTitle, item }: Modal
               onChange={(e: any) => {
                 setValue('password', e.target.value, {
                   shouldValidate: true,
-                });
+                })
               }}
             />
           </ContainerFields>
@@ -117,12 +118,12 @@ export default function ModalLogin({ close, open, title, subTitle, item }: Modal
               isUppercase
               content="Login"
               onClick={() => {
-                close();
+                close()
               }}
             />
           </DialogActions>
         </DialogContentPersonalized>
       </form>
     </DialogPersonalized>
-  );
+  )
 }

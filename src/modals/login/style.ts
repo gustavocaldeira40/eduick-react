@@ -1,7 +1,7 @@
-import { Dialog, DialogContent, DialogTitle, Grid } from '@material-ui/core';
-import styled from 'styled-components';
+import { Dialog, DialogContent, DialogTitle, Grid } from '@material-ui/core'
+import styled from 'styled-components'
 
-export type TextTitleProps = { isUppercase?: boolean; isBold?: boolean; colorPersonalized?: any };
+export type TextTitleProps = { isUppercase?: boolean; isBold?: boolean; colorPersonalized?: any }
 
 export const ContainerIcon = styled.div`
   width: 51px;
@@ -18,14 +18,14 @@ export const ContainerIcon = styled.div`
 
   position: fixed;
   cursor: pointer;
-`;
+`
 
-export const DialogPersonalized = styled(Dialog)``;
+export const DialogPersonalized = styled(Dialog)``
 
 export const ContainerTitle = styled(Grid)`
   margin: 2% 0;
   background-color: #6a40e4;
-`;
+`
 
 export const TextTitle = styled.p<TextTitleProps>`
   font-family: Poppins;
@@ -40,7 +40,7 @@ export const TextTitle = styled.p<TextTitleProps>`
   letter-spacing: -0.06em;
 
   color: ${(props) => (props.colorPersonalized ? 'rgb(255,234,164)' : 'white')};
-`;
+`
 
 export const DialogContentPersonalized = styled(DialogContent)`
   background-color: #6a40e4;
@@ -53,14 +53,14 @@ export const DialogContentPersonalized = styled(DialogContent)`
     width: auto;
     height: 100vh;
   }
-`;
+`
 
 export const ContainerFields = styled.div`
   height: 20em;
   display: flex;
   flex-direction: column;
   padding: 2%;
-`;
+`
 
 export const LabelFields = styled.p`
   font-family: Open Sans;
@@ -70,4 +70,4 @@ export const LabelFields = styled.p`
   line-height: 191.68%;
 
   color: #ffffff;
-`;
+`

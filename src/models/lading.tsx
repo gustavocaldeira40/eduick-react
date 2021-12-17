@@ -1,3 +1,3 @@
 export default interface LandingData {
-  role: string;
+  role: string
 }

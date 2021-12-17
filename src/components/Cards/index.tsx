@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 
 import {
   Container,
@@ -9,18 +9,18 @@ import {
   ContainerLessons,
   TextLessons,
   TextTitle,
-} from './style';
-import CourseIcon from '../../assets/images/course-example.png';
+} from './style'
+import CourseIcon from '../../assets/images/course-example.png'
 
 type CardsProps = {
-  width?: string | number;
-  height?: string | number;
-  classification?: [];
-  banner: string;
-  title: string;
-  lessons: number;
-  children?: any;
-};
+  width?: string | number
+  height?: string | number
+  classification?: []
+  banner: string
+  title: string
+  lessons: number
+  children?: any
+}
 
 //  <AiTwotoneStar color="#FFC908" size={23} />
 export default function Cards({ width, height, banner, title, lessons, children, ...rest }: CardsProps) {
@@ -39,5 +39,5 @@ export default function Cards({ width, height, banner, title, lessons, children,
         <TextTitle>{title}</TextTitle>
       </ContainerContent>
     </Container>
-  );
+  )
 }

@@ -1,8 +1,8 @@
-import React from 'react';
+import React from 'react'
 
-import Error from '../Error';
+import Error from '../Error'
 
-import * as S from './styles';
+import * as S from './styles'
 
 function NotFound({ history }: any) {
   return (
@@ -13,7 +13,7 @@ function NotFound({ history }: any) {
         message="A página que você está procurando não pode ser encontrada."
       />
     </S.Container>
-  );
+  )
 }
 
-export default NotFound;
+export default NotFound

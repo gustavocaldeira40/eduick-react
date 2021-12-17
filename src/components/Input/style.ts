@@ -1,5 +1,5 @@
-import { FormHelperText, TextField } from '@material-ui/core';
-import styled from 'styled-components';
+import { FormHelperText, TextField } from '@material-ui/core'
+import styled from 'styled-components'
 
 export const Container = styled.div`
   width: 601px;
@@ -8,12 +8,12 @@ export const Container = styled.div`
   border: 1px solid #a68eef;
   box-sizing: border-box;
   border-radius: 4px;
-`;
+`
 
 export const FormHelperTextPersonalized = styled(FormHelperText)`
   color: white;
   text-align: center;
-`;
+`
 
 export const TextFieldPersonalized = styled(TextField)`
   height: auto;
@@ -25,7 +25,7 @@ export const TextFieldPersonalized = styled(TextField)`
   border-radius: 4px;
 
   width: 10%;
-`;
+`
 
 export const InputPersonalized = styled.input`
   width: 100%;
@@ -34,4 +34,4 @@ export const InputPersonalized = styled.input`
   border: 1px solid #a68eef;
   box-sizing: border-box;
   border-radius: 4px;
-`;
+`
