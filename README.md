@@ -1,4 +1,4 @@
-<h1 align="center">Startec </h1>
+<h1 align="center">Eduick </h1>
 <p align="center">Frontend Web do Projeto Eduick feito em React com TypeScript</p>
 
 <h4 align="center">
